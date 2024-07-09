@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="images/bookmark.png" />
+    <title>Bookmarker</title>
+
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <main>
+      <section id="home" class="pt-5 w-100">
+        <div
+          class="container d-flex flex-column justify-content-center align-items-center w-100"
+        >
+          <h1 class="fw-bolder mb-4 position-relative">Bookmarker</h1>
+          <div
+            class="home-content d-flex flex-column justify-content-center align-items-center w-100 p-3 my-4 gap-3"
+          >
+            <div class="d-flex flex-column justify-content-center">
+              <h2>
+                <span class="fa fa-bookmark d-inline-block pe-2"></span>Bookmark
+                your favorite sites<span
+                  class="fa fa-bookmark d-inline-block ps-2"
+                ></span>
+              </h2>
+            </div>
+            <div class="d-flex flex-column justify-content-center w-100 gap-1">
+              <label class="fw-bold" for="siteName"
+                ><span class="fa fa-book-bookmark pe-2"></span>Site Name</label
+              >
+              <input
+                type="text"
+                id="siteName"
+                class="form-control mb-1"
+                placeholder="Bookmark Name"
+              />
+              <p class="nameOfSite d-none text-danger">
+                Site name must contain at least 3 characters
+              </p>
+            </div>
+            <div class="d-flex flex-column justify-content-center w-100 gap-1">
+              <label class="fw-bold" for="siteURL"
+                ><span class="fa fa-link pe-2"></span>Site URL.</label
+              >
+              <input
+                type="text"
+                id="siteURL"
+                class="form-control mb-1"
+                placeholder="Website URL"
+              />
+              <p class="d-none text-danger urlValidation">
+                Site URL must be a valid one.
+              </p>
+            </div>
+            <button class="btn addBtn px-5" id="addBtn">Add Bookmark</button>
+          </div>
+          <div class="w-100 overflow-x-auto">
+            <table class="table text-center my-5">
+              <thead>
+                <th>Index</th>
+                <th>Website Name</th>
+                <th>Visit</th>
+                <th>Update</th>
+                <th>Delete</th>
+              </thead>
+              <tbody id="tableBody"></tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
